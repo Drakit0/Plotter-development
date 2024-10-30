@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload G-code File</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='engranajes.jpg') }}">
+</head>
+
+<body> 
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='aluminum.png') }}");
+        }
+    </style>
+
+    <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='engranajes.jpg') }}" style="width: 25%; height: auto;">
+        <h1>G-code file uploader</h1>
+        <h3>Through this API gcode files reach the raspberry, the control system of the plotter.</h3>
+        <br>
+        <br>
+
+        <form action="http://127.0.0.1:5000/upload/" method="post" enctype="multipart/form-data" target="_blank">
+            <input type="file" name="file" accept=".gcode">
+            <input type="submit" value="Upload">
+            
+        </form>
+
+    </div>
+</body>
+
+</html>

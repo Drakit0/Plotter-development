@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Result</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='engranajes.jpg') }}">
+
+</head>
+<body> 
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='aluminum.png') }}");
+        }
+    </style>
+
+    <div style="text-align: center;">
+    <img src="{{ url_for('static', filename='engranajes.jpg') }}" style="width: 25%; height: auto;">
+    <h1>File Upload Result</h1>
+
+    <div id="result">
+        <p><strong>File Name:</strong> {{ api_response.filename }}</p>
+        <p><strong>File Size:</strong> {{ api_response.file_size }} lines</p>
+        <p><strong>Message:</strong> {{ api_response.message }}</p>
+    </div>
+</body>
+</html>
