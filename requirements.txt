@@ -1,0 +1,8 @@
+adafruit-circuitpython-motorkit==1.6.14
+adafruit-circuitpython-motor==3.4.13
+gpiozero==2.0.1
+RPi.GPIO
+pigpio==1.78
+numpy==1.26.4
+sshkeyboard==2.3.1
+flask==3.0.3
